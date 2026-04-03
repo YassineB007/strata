@@ -1,0 +1,162 @@
+[
+  {
+    "id": "p1",
+    "slug": "void-oversized-hoodie",
+    "name": "VOID Oversized Hoodie",
+    "price": 198,
+    "category": "hoodies",
+    "collection": "SS26 — VOID",
+    "description": "Heavyweight cotton fleece with dropped shoulders, tonal embroidery, and a relaxed silhouette. Cut and sewn in Portugal.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1400&q=85",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1400&q=85"
+    ],
+    "featured": true,
+    "newDrop": true
+  },
+  {
+    "id": "p2",
+    "slug": "brutalist-hoodie",
+    "name": "Brutalist Hoodie",
+    "price": 225,
+    "category": "hoodies",
+    "collection": "SS26 — VOID",
+    "description": "Black pullover fleece with ribbed cuffs, a structured hood, and debossed branding at the back neck. Matte drawcord tips.",
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://i.pinimg.com/736x/40/25/f4/4025f4dbb66a5e6fd0450dc74314ded1.jpg",
+      "https://i.pinimg.com/736x/40/25/f4/4025f4dbb66a5e6fd0450dc74314ded1.jpg"
+    ],
+    "featured": true,
+    "newDrop": false
+  },
+  {
+    "id": "p3",
+    "slug": "archive-box-tee",
+    "name": "Archive Box Tee",
+    "price": 78,
+    "category": "tees",
+    "collection": "Core",
+    "description": "Midweight jersey with a boxy fit and vintage wash. Screen-printed graphic at chest; subtle distressing at hem.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "images": [
+      "https://i.pinimg.com/1200x/81/94/6c/81946c054538d6d24d99ea31af04f82d.jpg",
+      "https://i.pinimg.com/1200x/81/94/6c/81946c054538d6d24d99ea31af04f82d.jpg"
+    ],
+    "featured": true,
+    "newDrop": true
+  },
+  {
+    "id": "p4",
+    "slug": "monolith-longsleeve",
+    "name": "Monolith Longsleeve",
+    "price": 95,
+    "category": "tees",
+    "collection": "SS26 — VOID",
+    "description": "Ribbed collar and cuffs, elongated sleeves, and a minimal tonal logo at the sleeve.",
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://i.pinimg.com/1200x/59/f6/c0/59f6c05c63e586b045aed8aa0a064f11.jpg",
+      "https://i.pinimg.com/1200x/59/f6/c0/59f6c05c63e586b045aed8aa0a064f11.jpg"
+    ],
+    "featured": false,
+    "newDrop": true
+  },
+  {
+    "id": "p5",
+    "slug": "concrete-denim",
+    "name": "Concrete Denim",
+    "price": 268,
+    "category": "pants",
+    "collection": "SS26 — VOID",
+    "description": "Rigid indigo denim with a slim taper, bar-tacked pockets, and a clean hem. Washed for a subtle vintage cast.",
+    "sizes": ["28", "30", "32", "34", "36"],
+    "images": [
+      "https://i.pinimg.com/1200x/2c/5d/b0/2c5db05631aa38df06d753f4b18d57a1.jpg",
+      "https://i.pinimg.com/1200x/2c/5d/b0/2c5db05631aa38df06d753f4b18d57a1.jpg"
+    ],
+    "featured": true,
+    "newDrop": false
+  },
+  {
+    "id": "p6",
+    "slug": "wide-leg-trousers",
+    "name": "Wide Leg Trousers",
+    "price": 242,
+    "category": "pants",
+    "collection": "Core",
+    "description": "Wool-blend suiting fabric with a fluid drape. Pressed crease, side adjusters, and hook-and-bar closure.",
+    "sizes": ["28", "30", "32", "34"],
+    "images": [
+      "https://i.pinimg.com/736x/7b/a6/ad/7ba6add9051c75e5fc4ebc644f439fba.jpg",
+      "https://i.pinimg.com/736x/7b/a6/ad/7ba6add9051c75e5fc4ebc644f439fba.jpg"
+    ],
+    "featured": false,
+    "newDrop": true
+  },
+  {
+    "id": "p7",
+    "slug": "industrial-crossbody",
+    "name": "Industrial Crossbody",
+    "price": 156,
+    "category": "accessories",
+    "collection": "Core",
+    "description": "Ballistic nylon with magnetic Fidlock buckle, modular strap system, and interior card sleeve.",
+    "sizes": ["ONE SIZE"],
+    "images": [
+      "https://i.pinimg.com/1200x/ad/17/03/ad1703aa762adf038015796d9cbfbdb4.jpg",
+      "https://i.pinimg.com/1200x/ad/17/03/ad1703aa762adf038015796d9cbfbdb4.jpg"
+    ],
+    "featured": true,
+    "newDrop": false
+  },
+  {
+    "id": "p8",
+    "slug": "cold-wall-cap",
+    "name": "Cold Wall Cap",
+    "price": 68,
+    "category": "accessories",
+    "collection": "SS26 — VOID",
+    "description": "Structured six-panel cap in brushed cotton. Embroidered wordmark and tonal eyelets.",
+    "sizes": ["ONE SIZE"],
+    "images": [
+      "https://i.pinimg.com/1200x/d6/7a/a2/d67aa2c9b79fc9bc9b1ddd0993a227de.jpg",
+      "https://i.pinimg.com/1200x/d6/7a/a2/d67aa2c9b79fc9bc9b1ddd0993a227de.jpg"
+    ],
+    "featured": false,
+    "newDrop": true
+  },
+  {
+    "id": "p9",
+    "slug": "essential-crewneck",
+    "name": "Essential Crewneck",
+    "price": 165,
+    "category": "tees",
+    "collection": "Core",
+    "description": "Loopback cotton with a clean neckline and minimal branding at the hem. Layer-ready weight.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://i.pinimg.com/1200x/84/26/b5/8426b54dd30d8db060fd77dfd8cd6b34.jpg",
+      "https://i.pinimg.com/1200x/84/26/b5/8426b54dd30d8db060fd77dfd8cd6b34.jpg"
+    ],
+    "featured": false,
+    "newDrop": false
+  },
+  {
+    "id": "p10",
+    "slug": "graphic-tee-oxide",
+    "name": "Graphic Tee — Oxide",
+    "price": 85,
+    "category": "tees",
+    "collection": "SS26 — VOID",
+    "description": "Limited run graphic inspired by industrial signage. Soft-hand print on garment-dyed cotton.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "images": [
+      "https://i.pinimg.com/1200x/56/89/6a/56896a718e68050d15f38673655b4ef0.jpg",
+      "https://i.pinimg.com/1200x/56/89/6a/56896a718e68050d15f38673655b4ef0.jpg"
+    ],
+    "featured": false,
+    "newDrop": true
+  }
+]

@@ -1,0 +1,88 @@
+// STRATA catalog — matches Supabase `public.categories` / `public.products`
+// Use a direct Postgres URL for Prisma (Supabase: Settings → Database → URI, or session pooler).
+// https://www.prisma.io/docs/orm/overview/databases/supabase
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id        String    @id @default(uuid()) @db.Uuid
+  slug      String    @unique
+  label     String
+  sortOrder Int       @default(0) @map("sort_order")
+  products  Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id          String   @id
+  slug        String   @unique
+  name        String
+  price       Int
+  categoryId  String   @map("category_id") @db.Uuid
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  collection  String
+  description String
+  sizes       Json     @default("[]")
+  images      Json     @default("[]")
+  featured    Boolean  @default(false)
+  newDrop     Boolean  @default(false) @map("new_drop")
+  createdAt   DateTime? @default(now()) @map("created_at")
+
+  @@index([categoryId])
+  @@index([slug])
+  @@map("products")
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  SHIPPED
+  CANCELLED
+}
+
+/// Linked to Supabase Auth: `user_id` = `auth.users.id`
+model Order {
+  id        String      @id @default(uuid()) @db.Uuid
+  userId    String      @map("user_id") @db.Uuid
+  status    OrderStatus @default(PENDING)
+  total     Int
+  currency  String      @default("usd")
+
+  shippingName    String? @map("shipping_name")
+  shippingLine1   String? @map("shipping_line1")
+  shippingLine2   String? @map("shipping_line2")
+  shippingCity    String? @map("shipping_city")
+  shippingState   String? @map("shipping_state")
+  shippingPostal  String? @map("shipping_postal")
+  shippingCountry String? @map("shipping_country")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  items     OrderItem[]
+
+  @@index([userId])
+  @@map("orders")
+}
+
+model OrderItem {
+  id          String @id @default(uuid()) @db.Uuid
+  orderId     String @map("order_id") @db.Uuid
+  order       Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String @map("product_id")
+  productName String @map("product_name")
+  unitPrice   Int    @map("unit_price")
+  size        String
+  quantity    Int
+  imageUrl    String? @map("image_url")
+
+  @@index([orderId])
+  @@index([productId])
+  @@map("order_items")
+}
