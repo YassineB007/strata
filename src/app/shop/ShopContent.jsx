@@ -36,7 +36,7 @@ export default function ShopContent({ products: allProducts, categories }) {
   };
 
   return (
-    <div className="mx-auto max-w-[1600px] px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
+    <div className="mx-auto w-full min-w-0 max-w-[1600px] overflow-x-clip px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
       <div className="relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-12 shadow-[0_24px_80px_-40px_rgba(0,0,0,0.15)] sm:px-10 sm:py-16 dark:bg-[linear-gradient(145deg,#0c0c10_0%,#08080a_100%)] dark:shadow-[0_28px_90px_-40px_rgba(0,0,0,0.6)]">
         <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/[0.12] blur-[90px] dark:bg-accent/[0.08]" />
         <div className="pointer-events-none absolute -left-16 bottom-0 h-48 w-48 rounded-full bg-violet-500/[0.06] blur-[70px]" />

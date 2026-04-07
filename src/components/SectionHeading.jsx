@@ -2,7 +2,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, index }) {
   const num = index != null ? String(index).padStart(2, "0") : null;
 
   return (
-    <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10">
+    <div className="mx-auto max-w-[1600px] min-w-0 overflow-x-clip px-4 sm:px-6 lg:px-10">
       <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-20">
         {num && (
           <span className="stagger-in hidden font-[family-name:var(--font-display)] text-[clamp(4.5rem,14vw,9rem)] font-extrabold leading-[0.85] tracking-[-0.07em] text-[var(--foreground)]/[0.055] md:block dark:text-white/[0.06]">

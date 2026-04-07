@@ -37,7 +37,7 @@ export default async function RootLayout({ children }) {
       className={`${syne.variable} ${space.variable} ${mono.variable} dark`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen font-[family-name:var(--font-space)] antialiased">
+      <body className="min-h-screen overflow-x-clip font-[family-name:var(--font-space)] antialiased">
         <Providers initialUser={initialUser}>
           <Shell>{children}</Shell>
         </Providers>

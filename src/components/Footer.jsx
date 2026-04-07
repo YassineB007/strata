@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-[var(--border)] bg-[var(--surface)] dark:bg-[#050506]">
+    <footer className="relative min-w-0 overflow-x-clip border-t border-[var(--border)] bg-[var(--surface)] dark:bg-[#050506]">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
-      <div className="mx-auto grid max-w-[1600px] gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:gap-10 lg:px-10">
+      <div className="mx-auto grid min-w-0 max-w-[1600px] gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:gap-10 lg:px-10">
         <div>
           <p className="font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-[0.06em] text-[var(--foreground)]">
             STRATA

@@ -30,27 +30,35 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-2xl transition-[box-shadow,background-color] duration-300 dark:bg-[#060607]/85 ${
+      className={`sticky top-0 z-50 overflow-x-clip border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-2xl transition-[box-shadow,background-color] duration-300 dark:bg-[#060607]/85 ${
         scrolled
           ? "shadow-[0_12px_40px_-12px_rgba(0,0,0,0.18)] dark:shadow-[0_12px_48px_-12px_rgba(0,0,0,0.55)]"
           : ""
       }`}
     >
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      <div className="mx-auto flex h-[4.25rem] max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-10">
-        <Link
-          href="/"
-          className="group relative flex shrink-0 items-baseline gap-0.5"
-        >
-          <span className="font-[family-name:var(--font-display)] text-xl font-extrabold tracking-[0.1em] text-[var(--foreground)] transition-colors duration-300 group-hover:text-accent sm:text-2xl">
-            STRATA
-          </span>
-          <span className="font-[family-name:var(--font-display)] text-[10px] font-bold text-accent sm:text-xs">
-            ®
-          </span>
-        </Link>
+      <div className="mx-auto flex h-[4.25rem] min-w-0 max-w-[1600px] items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:h-[4.5rem] lg:gap-6 lg:px-10">
+        <div className="flex min-w-0 shrink items-center gap-2 sm:gap-4">
+          <Link
+            href="/"
+            className="group relative flex shrink-0 items-baseline gap-0.5"
+          >
+            <span className="font-[family-name:var(--font-display)] text-lg font-extrabold tracking-[0.1em] text-[var(--foreground)] transition-colors duration-300 group-hover:text-accent sm:text-xl md:text-2xl">
+              STRATA
+            </span>
+            <span className="font-[family-name:var(--font-display)] text-[10px] font-bold text-accent sm:text-xs">
+              ®
+            </span>
+          </Link>
+          <Link
+            href="/shop"
+            className="shrink-0 rounded-full px-2.5 py-1.5 text-[9px] font-bold tracking-[0.18em] text-[var(--muted)] uppercase transition-colors hover:text-[var(--foreground)] sm:hidden"
+          >
+            Shop
+          </Link>
+        </div>
 
-        <nav className="flex items-center gap-8 sm:gap-12">
+        <nav className="hidden items-center gap-6 md:gap-10 lg:gap-12 sm:flex">
           {links.map(({ href, label }) => {
             const active = pathname === href;
             return (
@@ -69,7 +77,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3">
           <div className="hidden min-w-0 flex-1 justify-end md:flex md:max-w-sm lg:max-w-md">
             <SearchBar />
           </div>
@@ -106,7 +114,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={openCart}
-            className="group relative flex h-11 items-center gap-2 overflow-hidden rounded-full border border-[var(--border)] bg-[var(--surface-2)]/55 px-5 text-[10px] font-bold tracking-[0.2em] text-[var(--foreground)] uppercase transition-all duration-300 hover:border-accent/35 hover:bg-accent/12 hover:shadow-[0_0_24px_-8px_rgba(212,255,76,0.25)] dark:bg-white/[0.04]"
+            className="group relative flex h-10 shrink-0 items-center gap-1.5 overflow-hidden rounded-full border border-[var(--border)] bg-[var(--surface-2)]/55 px-3.5 text-[9px] font-bold tracking-[0.18em] text-[var(--foreground)] uppercase transition-all duration-300 hover:border-accent/35 hover:bg-accent/12 hover:shadow-[0_0_24px_-8px_rgba(212,255,76,0.25)] sm:h-11 sm:gap-2 sm:px-5 sm:text-[10px] sm:tracking-[0.2em] dark:bg-white/[0.04]"
             aria-label="Open cart"
           >
             <span>Bag</span>
