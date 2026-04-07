@@ -2,22 +2,33 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden bg-[#020203] text-white">
+    <section className="relative min-h-[100dvh] overflow-hidden bg-[var(--background)] text-[var(--foreground)] dark:bg-[#020203] dark:text-white">
       <div
-        className="pointer-events-none absolute -left-1/3 top-[-10%] h-[85%] w-[75%] rounded-full bg-accent/[0.11] blur-[130px]"
+        className="pointer-events-none absolute -left-1/3 top-[-10%] h-[85%] w-[75%] rounded-full bg-accent/[0.18] blur-[130px] dark:bg-accent/[0.11]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-1/4 bottom-[-5%] h-[65%] w-[55%] rounded-full bg-violet-500/[0.09] blur-[110px]"
+        className="pointer-events-none absolute -right-1/4 bottom-[-5%] h-[65%] w-[55%] rounded-full bg-violet-500/[0.07] blur-[110px] dark:bg-violet-500/[0.09]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_120%,rgba(0,0,0,0.15),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_120%,rgba(10,10,11,0.06),transparent_55%)] dark:bg-[radial-gradient(ellipse_100%_60%_at_50%_120%,rgba(0,0,0,0.15),transparent_55%)]"
         aria-hidden
       />
 
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.2]"
+        className="pointer-events-none absolute inset-0 opacity-[0.45] dark:hidden"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(10,10,11,0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(10,10,11,0.06) 1px, transparent 1px)
+          `,
+          backgroundSize: "72px 72px",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 hidden opacity-[0.2] dark:block"
         style={{
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
@@ -28,38 +39,38 @@ export default function Hero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.35)_50%,rgba(0,0,0,0.94)_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,color-mix(in_oklab,var(--background)_55%,transparent)_42%,var(--background)_100%)] dark:bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.35)_50%,rgba(0,0,0,0.94)_100%)]"
         aria-hidden
       />
 
       <div
-        className="pointer-events-none absolute left-4 top-24 h-16 w-16 border-l-2 border-t-2 border-white/15 sm:left-6 sm:top-28 lg:left-10"
+        className="pointer-events-none absolute left-4 top-24 h-16 w-16 border-l-2 border-t-2 border-[var(--foreground)]/12 sm:left-6 sm:top-28 lg:left-10 dark:border-white/15"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-28 right-4 h-16 w-16 border-b-2 border-r-2 border-white/10 sm:bottom-32 sm:right-6 lg:right-10"
+        className="pointer-events-none absolute bottom-28 right-4 h-16 w-16 border-b-2 border-r-2 border-[var(--foreground)]/10 sm:bottom-32 sm:right-6 lg:right-10 dark:border-white/10"
         aria-hidden
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-[1600px] flex-col justify-end px-4 pb-20 pt-32 sm:px-6 sm:pb-28 lg:flex-row lg:items-end lg:justify-between lg:px-10 lg:pb-32">
         <div className="max-w-4xl lg:max-w-[min(56vw,52rem)]">
-          <div className="hero-x-in mb-7 inline-flex items-center gap-3 border border-white/12 bg-gradient-to-r from-white/[0.07] to-transparent px-4 py-2.5 backdrop-blur-xl">
+          <div className="hero-x-in mb-7 inline-flex items-center gap-3 border border-[var(--border)] bg-gradient-to-r from-[var(--surface)]/90 to-transparent px-4 py-2.5 backdrop-blur-xl dark:border-white/12 dark:from-white/[0.07]">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent shadow-[0_0_16px_var(--accent)]" />
-            <span className="text-[10px] font-bold tracking-[0.38em] text-zinc-300 uppercase sm:text-[11px]">
+            <span className="text-[10px] font-bold tracking-[0.38em] text-[var(--muted)] uppercase sm:text-[11px] dark:text-zinc-300">
               SS26 — New arrivals
             </span>
           </div>
 
           <h1 className="hero-motion hero-motion-delay-1 font-[family-name:var(--font-display)] text-[clamp(3rem,11.5vw,6.75rem)] font-extrabold leading-[0.9] tracking-[-0.045em]">
-            <span className="block text-white drop-shadow-[0_4px_40px_rgba(0,0,0,0.45)]">
+            <span className="block text-[var(--foreground)] drop-shadow-[0_2px_24px_rgba(10,10,11,0.08)] dark:text-white dark:drop-shadow-[0_4px_40px_rgba(0,0,0,0.45)]">
               Form follows
             </span>
-            <span className="mt-2 block bg-gradient-to-br from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+            <span className="mt-2 block bg-gradient-to-br from-[var(--foreground)] via-zinc-700 to-zinc-500 bg-clip-text text-transparent dark:from-white dark:via-zinc-300 dark:to-zinc-600">
               attitude.
             </span>
           </h1>
 
-          <p className="hero-motion hero-motion-delay-2 mt-9 max-w-lg text-base leading-[1.7] text-zinc-400 sm:text-[17px]">
+          <p className="hero-motion hero-motion-delay-2 mt-9 max-w-lg text-base leading-[1.7] text-[var(--muted)] sm:text-[17px]">
             Architectural silhouettes, industrial textures, and uncompromising
             craft — built for the city, not the algorithm.
           </p>
@@ -74,13 +85,13 @@ export default function Hero() {
             </Link>
             <Link
               href="/shop?category=hoodies"
-              className="inline-flex min-h-[54px] items-center justify-center rounded-full border border-white/18 bg-white/[0.04] px-9 text-[11px] font-bold tracking-[0.2em] text-white uppercase backdrop-blur-md transition-all hover:border-accent/45 hover:bg-white/[0.09]"
+              className="inline-flex min-h-[54px] items-center justify-center rounded-full border border-[var(--foreground)]/15 bg-[var(--foreground)]/[0.04] px-9 text-[11px] font-bold tracking-[0.2em] text-[var(--foreground)] uppercase backdrop-blur-md transition-all hover:border-accent/45 hover:bg-[var(--foreground)]/[0.07] dark:border-white/18 dark:bg-white/[0.04] dark:text-white dark:hover:bg-white/[0.09]"
             >
               Hoodies
             </Link>
           </div>
 
-          <p className="hero-motion hero-motion-delay-5 mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono-nums text-[11px] tracking-wide text-zinc-500">
+          <p className="hero-motion hero-motion-delay-5 mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono-nums text-[11px] tracking-wide text-[var(--muted)] dark:text-zinc-500">
             <span className="flex items-center gap-2">
               <span className="h-px w-6 bg-accent/60" />
               EU shipping €200+
@@ -96,12 +107,12 @@ export default function Hero() {
             ].map(([a, b]) => (
               <div
                 key={a}
-                className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 backdrop-blur-md"
+                className="rounded-full border border-[var(--border)] bg-[var(--surface)]/80 px-4 py-2 backdrop-blur-md dark:border-white/12 dark:bg-white/[0.04]"
               >
-                <p className="font-mono-nums text-[9px] tracking-[0.2em] text-zinc-500 uppercase">
+                <p className="font-mono-nums text-[9px] tracking-[0.2em] text-[var(--muted)] uppercase">
                   {a}
                 </p>
-                <p className="mt-0.5 font-[family-name:var(--font-display)] text-sm font-bold text-white">
+                <p className="mt-0.5 font-[family-name:var(--font-display)] text-sm font-bold text-[var(--foreground)] dark:text-white">
                   {b}
                 </p>
               </div>
@@ -109,25 +120,25 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-x-in mt-14 hidden w-60 shrink-0 flex-col gap-8 border-l border-white/12 pl-10 lg:mt-0 lg:flex">
+        <div className="hero-x-in mt-14 hidden w-60 shrink-0 flex-col gap-8 border-l border-[var(--border)] pl-10 lg:mt-0 lg:flex dark:border-white/12">
           <div>
-            <p className="font-mono-nums text-[10px] tracking-[0.22em] text-zinc-500 uppercase">
+            <p className="font-mono-nums text-[10px] tracking-[0.22em] text-[var(--muted)] uppercase">
               Est.
             </p>
-            <p className="mt-2 font-[family-name:var(--font-display)] text-4xl font-extrabold tracking-tight text-white">
+            <p className="mt-2 font-[family-name:var(--font-display)] text-4xl font-extrabold tracking-tight text-[var(--foreground)] dark:text-white">
               2026
             </p>
           </div>
           <div>
-            <p className="font-mono-nums text-[10px] tracking-[0.22em] text-zinc-500 uppercase">
+            <p className="font-mono-nums text-[10px] tracking-[0.22em] text-[var(--muted)] uppercase">
               Drop policy
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)] dark:text-zinc-400">
               Limited units on core styles. No restock on select pieces.
             </p>
           </div>
           <div className="h-px w-full bg-gradient-to-r from-accent/50 to-transparent" />
-          <p className="font-mono-nums text-[10px] leading-relaxed tracking-[0.08em] text-zinc-500">
+          <p className="font-mono-nums text-[10px] leading-relaxed tracking-[0.08em] text-[var(--muted)] dark:text-zinc-500">
             STRATA / VOID DIVISION
           </p>
         </div>
@@ -137,7 +148,7 @@ export default function Hero() {
         className="hero-scroll-hint absolute bottom-10 left-1/2 z-10 hidden -translate-x-1/2 md:block"
         aria-hidden
       >
-        <div className="flex h-14 w-9 flex-col items-center justify-start rounded-full border border-white/14 bg-white/[0.04] pt-2.5 backdrop-blur-md">
+        <div className="flex h-14 w-9 flex-col items-center justify-start rounded-full border border-[var(--foreground)]/12 bg-[var(--surface)]/70 pt-2.5 backdrop-blur-md dark:border-white/14 dark:bg-white/[0.04]">
           <span className="hero-scroll-line h-7 w-px rounded-full bg-gradient-to-b from-accent via-accent/50 to-transparent" />
         </div>
       </div>
